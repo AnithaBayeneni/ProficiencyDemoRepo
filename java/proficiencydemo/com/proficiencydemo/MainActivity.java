@@ -1,4 +1,4 @@
-package mydemo.com.mydemo;
+package proficiencydemo.com.proficiencydemo;
 
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -25,9 +25,9 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-import mydemo.com.mydemo.adater.SwipeListAdapter;
-import mydemo.com.mydemo.app.AppController;
 import mydemo.com.mydemo.model.Rows;
+import proficiencydemo.com.proficiencydemo.adater.SwipeListAdapter;
+import proficiencydemo.com.proficiencydemo.app.AppController;
 
 public class MainActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener {
     private String TAG = MainActivity.class.getSimpleName();
@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
         setContentView(R.layout.activity_main);
         listView = (ListView) findViewById(R.id.listView);
         swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);
-
         dataList = new ArrayList<>();
         adapter = new SwipeListAdapter(this, dataList);
         listView.setAdapter(adapter);
