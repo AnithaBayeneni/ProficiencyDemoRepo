@@ -1,4 +1,4 @@
-package mydemo.com.mydemo.adater;
+package proficiencydemo.com.proficiencydemo.adater;
 
 import android.app.Activity;
 import android.content.Context;
@@ -14,8 +14,8 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-import mydemo.com.mydemo.R;
 import mydemo.com.mydemo.model.Rows;
+import proficiencydemo.com.proficiencydemo.R;
 
 public class SwipeListAdapter extends BaseAdapter {
     private Activity activity;
@@ -51,9 +51,9 @@ public class SwipeListAdapter extends BaseAdapter {
         if (convertView == null)
             convertView = inflater.inflate(R.layout.list_row, null);
 
-        TextView tvTitle = (TextView) convertView.findViewById(R.id.textViewtitle);
-        TextView tvDesc = (TextView) convertView.findViewById(R.id.textViewdesc);
-        ImageView ivImage = (ImageView) convertView.findViewById(R.id.imageView);
+        TextView tvTitle =  convertView.findViewById(R.id.textViewtitle);
+        TextView tvDesc =  convertView.findViewById(R.id.textViewdesc);
+        ImageView ivImage = convertView.findViewById(R.id.imageView);
 
         String title = itemList.get(position).getTitle();
         String desc = itemList.get(position).getDescription();
